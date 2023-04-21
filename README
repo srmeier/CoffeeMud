@@ -1,3 +1,21 @@
+Notes:
+
+curl https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.tar.gz -o jdk-20_linux-x64_bin.tar.gz
+tar -xvzf jdk-20_linux-x64_bin.tar.gz
+mkdir /usr/java
+mv jdk-20.0.1 /usr/java/jdk-20.0.1
+** edit ~/.bashrc and add the following line **
+export PATH=/usr/java/jdk-20.0.1/bin:$PATH
+source .bashrc
+apt install dos2unix
+dos2unix mudUNIX.sh
+chmod 766 mudUNIX.sh
+sh InstallUNIX.sh
+"/usr/java/jdk-20.0.1"
+java -classpath ".:./lib/js.jar:./lib/jzlib.jar" -Xms129m -Xmx256m com.planet_ink.coffee_mud.application.MUD "LuridMUD"
+haproxy -f /root/CoffeeMud/haproxy.conf
+8889 -> admin portal
+
 CoffeeMud (C)2000-2023 Bo Zimmerman
 Please read the LICENSE file for license information
 Please read the NOTICE file for credits information
