@@ -17,7 +17,7 @@ Siplet.prototype.connectToURL = function(host, port, mudport, callback)
 {
 	if(this.socket == null)
 	{
-		this.socket = new WebSocket("ws://"+host+":"+port+"/SipletInterface");
+		this.socket = new WebSocket("wss://"+host+"/SipletInterface");
 		var self=this;
 		this.host = host;
 		this.mudport = mudport;
